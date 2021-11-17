@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ccf930ce99.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="MainController.js"></script>
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body ng-app="myApp">
+    <div class="head-ctn">
+        <div>
+            <nav class="navbar">
+                <ul type="none">
+                    <li><a class="homenav" href="">Home</a></li>
+                    <li><a href="">Nav1</a></li>
+                    <li><a href="">Nav2</a></li>
+                    <li onclick="myFunction()"><a href=""><i class="fa fa-solid fa-moon"></i></button></a></li>
+                </ul>
+            </nav>
+        </div>
+        <header>
+            <h1>Mike's Bikes' Parts</h1>
+        </header>
+    </div>
+<!-- start of search container -->
+    <div class="search-ctn">
+        <div class="search">
+        <input type="search" class="searchbar" name="productsearch" placeholder="search by product" ng-model="productsearch">
+        <button class="searchbutton" name="searchbar"><i class="fas fa-search"></i></button>
+          </div>
+      </div>
+ <!-- end of search container -->
+ 
+    <div class="card-ctn" ng-controller="MainController">
+      <div class="card" ng-repeat="product in products | filter: productsearch">
+          <div class="image">
+              <img ng-src="{{ product.cover }}"> 
+          </div>
+          <div class="card_content">
+          <p class="title">{{ product.name }}</p> 
+          <p class="price">{{ product.price | currency }}</p> 
+                        <br>
+          <button class="selectbtn" onclick="selectItem()">Select</button>
+          <button class="buybtn">Buy</button>
+          </div>
+      </div>
+</div>
+<footer>
+    <div class= "aboutus">
+    <h2>About us</h2>
+    <p>We are bike enthusiasts who possess few motorcycles as trading in such machines is our bread and butter. As an bike enthusiast we ease out the process of procuring spares and accessories for our esteemed customers.</p>
+      </div>
+    <div class="contactus">
+    <h2>Contact us</h2>
+    <p>000-000-000</p>
+    <p>mikesbikesparts@smtn.com</p>
+    </div>
+    <div>
+        <h2>More from the Developer</h2>
+        <ul type="none" class="footer_list">
+            <li><i class="fab fa-facebook-square"></i><a href="#">Facebook</a></li>
+            <li><i class="fab fa-instagram"></i><a href="#">Instagram</a></li>
+            <li><i class="fab fa-github-square"></i><a href="https://github.com/MikesGit138" target="_blank">Github</a></li>
+        </ul>
+    </div>
+    
+  </footer>
+</body>
+</html>

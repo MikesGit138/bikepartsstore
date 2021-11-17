@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    font-family: 'Dongle', sans-serif;
+}
+.dark-mode{
+  background-color: black;
+  color: white;
+}
+.head-ctn{
+    background: url(https://cdn.shopify.com/s/files/1/1256/5083/files/FLECTR-360-wheel-reflector-01_1600x.jpg?v=1607103609);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 77vh;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2em;
+}
+.navbar li, a{
+    display: inline;
+    padding: .7em;
+    font-size: 1.15em;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a:hover{
+    color: darkgrey;
+}
+header{
+    
+    font-size: 3.1em;
+    padding: 0 1em;
+    color: white;
+}
+.search-ctn{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    row-gap: 1em;
+    padding: 3em;
+  }
+  .searchbar{
+    border:2px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: .1em .2em;
+    font-family: 'Dongle', sans-serif;
+    font-size: 32px;
+  }
+  .searchbar:focus{
+    background: black;
+    color:white;
+  }
+  .searchbutton{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: black;
+    cursor: pointer;
+    padding: .1em .2em;
+    font-size: 32px;
+  }
+  .searchbutton:hover{
+    color:rgb(187, 187, 243);
+    background: black;
+  }
+  .search{
+    display:flex;
+  }
+  .searchbutton{
+    color: white;
+    background: rgb(3, 3, 80);
+    border:none;
+  }
+
+.card-ctn{
+  padding-top: 5vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-row-gap: 4em;
+  grid-column-gap: 3em;
+}
+.card{
+  border: 2px solid rgb(10, 2, 59);
+  border-radius: 10px;
+}
+.card_content{
+  padding: 0 1em 0 1em;
+  display: flex;
+  flex-direction: column;
+  column-gap: 0;
+}
+img{
+  width: 15em;
+  height: 10em;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+.image{
+  display: flex;
+  justify-content: center;
+padding-top: 10px;
+object-fit: cover;
+}
+.selectbtn, .buybtn{
+  cursor: pointer;
+  font-style: bold;
+  font-family:'Dongle',sans-serif ;
+  font-size: 35px;
+  width: auto;
+  height:auto;
+  color: white;
+  background: rgb(3, 3, 80);
+  border-radius: 5px;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  margin-top: 0;
+  padding: 0px;
+}
+.selectbtn:hover, .buybtn:hover{
+    color:rgb(187, 187, 243);
+    background: black;
+}
+.title,.price{
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 0;
+  
+}
+h2{
+  border-bottom: 2px solid white;
+}
+footer{
+  margin-top: 5em;
+  background: rgb(3, 3, 80);
+  padding: 1em 4.5em;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 4.5em;
+  font-size: 30px;
+}
